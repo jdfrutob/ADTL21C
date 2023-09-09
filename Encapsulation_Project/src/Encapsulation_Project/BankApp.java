@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class BankApp {
     public static void main(String[] args) {
+
         // Create an array of BankAccount objects
         BankAccount[] accounts = new BankAccount[2];
         accounts[0] = new BankAccount("2022-1-01377", "John Daniel Binegas", 10000.0);
@@ -81,8 +82,9 @@ public class BankApp {
             account.displayAccountInfo();
             System.out.println();
 
-            System.out.print("Press \"/\" for the next account or \"0\" to exit to the main menu: ");
+            System.out.print("Press \"/\" for the next account or \"0\" to exit to the main menu: \n");
             String input = scanner.next();
+             System.out.println("Accounts Information:");
 
             if (input.equals("/")) {
                 accountIndex++;

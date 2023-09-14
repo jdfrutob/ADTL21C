@@ -1,9 +1,9 @@
-package OnlineShoppingSystem;
+package OnlineShopping;
 
 import java.util.List;
 import java.util.Scanner;
 
-public class OnlineShoppingSystem {
+public class MainApp {
     public static void main(String[] args) {
         // Create instances of Customer, Seller, and Product classes
         Customer customer1 = new Customer("Jd", "jd@example.com", "password123", 1);

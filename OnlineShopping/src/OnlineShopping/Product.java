@@ -1,4 +1,4 @@
-package OnlineShoppingSystem;
+package OnlineShopping;
 
 public class Product {
 
@@ -24,4 +24,3 @@ public class Product {
         return price;
     }
 }
-

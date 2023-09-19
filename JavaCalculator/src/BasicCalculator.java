@@ -18,12 +18,13 @@ public class BasicCalculator {
             num2 = scanner.nextDouble();
             clearTerminal();
 
-            System.out.println("Select an operation:");
+            System.out.println("Select an operation to perform on the two numbers:");
             System.out.println("1. Addition (+)");
             System.out.println("2. Subtraction (-)");
             System.out.println("3. Multiplication (*)");
             System.out.println("4. Division (/)");
-            System.out.println("5. Exit");
+            System.out.println("5. Modulo (%)");
+            System.out.println("6. Exit");
 
             System.out.print("Enter your choice: ");
             operator = scanner.next().charAt(0);
@@ -50,6 +51,10 @@ public class BasicCalculator {
                     }
                     break;
                 case '5':
+                    result = num1 % num2;
+                    System.out.println("Result: " + result);
+                    break;
+                case '6':
                     exit = true;
                     break;
                 default:
@@ -61,9 +66,12 @@ public class BasicCalculator {
                 System.out.print("Would you like to enter two new numbers? (yes/no): ");
                 String choice = scanner.next().toLowerCase();
                 if (!choice.equals("yes")) {
-                    clearTerminal();
-                    exit = true;
-
+                    // Ask for confirmation before exiting
+                    System.out.print("Are you sure you want to exit? (yes/no): ");
+                    choice = scanner.next().toLowerCase();
+                    if (choice.equals("yes")) {
+                        exit = true;
+                    }
                 }
                 if (!exit) {
                     clearTerminal();
@@ -80,6 +88,7 @@ public class BasicCalculator {
             if (System.getProperty("os.name").contains("Windows")) {
                 new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
             } else {
+                // Clear the terminal for non-Windows systems
                 System.out.print("\033[H\033[2J");
                 System.out.flush();
             }

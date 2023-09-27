@@ -66,7 +66,6 @@ public class BasicCalculator {
                 System.out.print("Would you like to enter two new numbers? (yes/no): ");
                 String choice = scanner.next().toLowerCase();
                 if (!choice.equals("yes")) {
-                    // Ask for confirmation before exiting
                     System.out.print("Are you sure you want to exit? (yes/no): ");
                     choice = scanner.next().toLowerCase();
                     if (choice.equals("yes")) {
@@ -88,7 +87,6 @@ public class BasicCalculator {
             if (System.getProperty("os.name").contains("Windows")) {
                 new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
             } else {
-                // Clear the terminal for non-Windows systems
                 System.out.print("\033[H\033[2J");
                 System.out.flush();
             }

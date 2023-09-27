@@ -34,6 +34,7 @@ public class Main {
         scanner.close();
     }
 
+    // Method to display account details
     private static void viewAccounts(BankAccount[] accounts) {
         for (BankAccount account : accounts) {
             System.out.println("Account Number: " + account.getAccountNumber());
@@ -44,29 +45,35 @@ public class Main {
     }
 }
 
+// BankAccount class
 class BankAccount {
     private String accountNumber;
     private String name;
     private double balance;
 
+    // Constructor to initialize BankAccount object
     public BankAccount(String accountNumber, String name, double balance) {
         this.accountNumber = accountNumber;
         this.name = name;
         this.balance = balance;
     }
 
+    // Method to get account number
     public String getAccountNumber() {
         return accountNumber;
     }
 
+    // Method to get account holder name
     public String getName() {
         return name;
     }
 
+    // Method to get account balance
     public double getBalance() {
         return balance;
     }
 
+    // Method to withdraw specified amount from account
     public boolean withdraw(double amount) {
         if (amount <= balance) {
             balance -= amount;

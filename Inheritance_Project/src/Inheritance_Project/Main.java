@@ -6,13 +6,13 @@ public class Main {
         Shitz.Erase();
         Employee employee[] = new Employee[1];
         employee[0] = new Employee();
-        employee[0].setName("Uranus");
+        employee[0].setName("Mars");
         employee[0].setID("0002");
         employee[0].setSalary(5000.0);
 
         Manager manager[] = new Manager[1];
         manager[0] = new Manager();
-        manager[0].setName("Uranus");
+        manager[0].setName("Earth");
         manager[0].setID("0001");
         manager[0].setSalary(10000.0);
 

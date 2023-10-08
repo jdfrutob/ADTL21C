@@ -2,9 +2,9 @@ public class StoryTime {
     public static void main(String[] args) {
 
         String intro1 ="Hello my Name is JD";
-        String intro2 = "Here is my Story : ";
+        String intro2 = " and Here is my Story : ";
 
-        System.out.println (intro1 + intro2);
+        System.out.println (intro1 +" "+ intro2);
         System.out.println ();
 
         String story = "Today, we were tasked with creating two Java projects for our ADTL21C subject.";

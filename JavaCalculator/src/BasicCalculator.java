@@ -18,6 +18,7 @@ public class BasicCalculator {
             num2 = scanner.nextDouble();
             clearTerminal();
 
+           
             System.out.println("Select an operation to perform on the two numbers:");
             System.out.println("1. Addition (+)");
             System.out.println("2. Subtraction (-)");
